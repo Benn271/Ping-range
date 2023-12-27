@@ -16,18 +16,28 @@ To indicate most, if not all, of the alive ip addresses within your given range 
   
 # Installation
   # Linux
-  * Run the following commands in the terminal
+  1. Run the following commands in the terminal
   ```
+  sudo apt-get update
+  sudo apt-get install python3
+  sudo apt-get install python-pip3
+  sudo git clone https://github.com/Benn271/Ping-range/tree/main
+  cd Ping-range
+  sudo pip3 install -r requirements.txt
   ```
 
   # Windows
-  * Run the following commands in Powershell
+ 1. Run the following commands in cmd
   ```
+  @"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
+  choco install -y python3
+  curl https://bootst/rap.pypa.io/get-pip.py -o get-pip.py
+  python get-pip.py
   ```
-
-  # Mac
-  * Run the following commands in the terminal
+  2. Download the zip of the Ping-range code file from github
+  3. Run the following commands in Powershell
   ```
+  pip3 install -r requirements.txt
   ```
 
 # How to use
