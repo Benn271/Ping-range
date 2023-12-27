@@ -50,5 +50,5 @@ python3 ping.py -h (help page) -start <start ip> -end <end ip>
 I am not responsible for any misuse of this tool. Any trouble you get into with this tool is not tied back to me. I just make educational tools. It may not show all alive hosts, it just pings and it is up to you to interpret the data.
 
 # Buy Me a Coffee 
-https://www.buymeacoffee.com/fuelmywork
+https://buymeacoffee.com/fuelmywork
 
