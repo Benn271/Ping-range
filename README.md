@@ -20,7 +20,7 @@ To indicate most, if not all, of the alive ip addresses within your given range 
 # How to use
 
 ```
-python3 ping.py -h <help page> -start <start ip> -end <end ip>
+python3 ping.py -h (help page) -start <start ip> -end <end ip>
 ```
 
 # License
