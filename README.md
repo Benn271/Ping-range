@@ -15,7 +15,20 @@ To indicate most, if not all, of the alive ip addresses within your given range 
   * GUI
   
 # Installation
+  # Linux
+  * Run the following commands in the terminal
+  ```
+  ```
 
+  # Windows
+  * Run the following commands in Powershell
+  ```
+  ```
+
+  # Mac
+  * Run the following commands in the terminal
+  ```
+  ```
 
 # How to use
 
