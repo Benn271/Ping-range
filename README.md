@@ -10,7 +10,7 @@ To indicate most, if not all, of the alive ip addresses within your given range 
   # V2 Features - Release date TBD
   * Supports any octet change.
   * Uses threading for faster results.
-  # Later Versions
+  # Potential Later Versions
   * Output to a file that is specified.
   * GUI
   
@@ -20,7 +20,7 @@ To indicate most, if not all, of the alive ip addresses within your given range 
 # How to use
 
 ```
-python3 ping.py -h
+python3 ping.py -h <help page> -start <start ip> -end <end ip>
 ```
 
 # License
