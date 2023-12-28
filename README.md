@@ -10,7 +10,7 @@ To indicate most, if not all, of the alive ip addresses within your given range 
 * Shows the ping results in terminal.
   # V2 Features - Release date TBD
   * Supports any octet change.
-  * Uses threading for faster results.
+  * Uses threading for faster results. (Beta Testing)
   # Potential Later Versions
   * Output to a file that is specified.
   * GUI
