@@ -4,6 +4,7 @@ import h
 import checkip
 import running
 
+
 def main():
     if len(sys.argv) < 2:
         print("must have a arg")
@@ -17,6 +18,10 @@ def main():
     Start_Ip = args.flag_str('si','start_ip','start')
     End_Ip = args.flag_str('ei','end_ip', 'end')
 
+    if Start_Ip == None or End_Ip == None:
+        print("Must have both start and end ip addresses")
+        sys.exit()
+
     print(f'start: {Start_Ip}')
     print(f'end: {End_Ip}')
     print("starting.....")
@@ -24,7 +29,9 @@ def main():
 
     if checkip.check(Start_Ip) and checkip.check(End_Ip):
         running.run(Start_Ip, End_Ip)
-   
+    
+    print("Results are in ping_output.txt")
+    print("")
     sys.exit()
     
 

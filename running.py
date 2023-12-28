@@ -1,10 +1,11 @@
 import os
 import threading
 import time
-import sys
 import ipaddress
 
 ip_list = []
+result = []
+file = open('ping_output.txt', 'w')
 
 def run(start_ip, end_ip):
     #iterate over the ip address and add to list
@@ -20,8 +21,17 @@ def run(start_ip, end_ip):
         thread.start()
         time.sleep(0.5)
     
+    while threading.active_count() != 1:
+        time.sleep(0.2)
+        continue
+
+    for i in result:
+        file.write(i)
+    file.close()
 
 
 def ping(ip):
-    print(os.popen(f"ping {ip}").read())
+    
+    result.append(os.popen(f"ping {ip}").read())
+    
 
