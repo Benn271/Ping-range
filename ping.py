@@ -25,8 +25,6 @@ def main():
     if checkip.check(Start_Ip) and checkip.check(End_Ip):
         running.run(Start_Ip, End_Ip)
    
-
-
     sys.exit()
     
 
