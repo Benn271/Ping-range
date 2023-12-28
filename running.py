@@ -1,27 +1,27 @@
 import os
+import threading
+import time
 import sys
+import ipaddress
+
+ip_list = []
 
 def run(start_ip, end_ip):
-    start_num = start_ip.split(".")
-    end_num = end_ip.split(".")
-    start3 = start_num[0:3]
-    startend3 = end_num[0:3]
+    #iterate over the ip address and add to list
+    start_ip = ipaddress.IPv4Address(start_ip)
+    end_ip = ipaddress.IPv4Address(end_ip)
 
-    if start3 != startend3:
-        print("Ip adresses must have the same starting 3 octets")
-        sys.exit()
-    elif int(start_num[-1]) > int(end_num[-1]):
-        print("End can't be smaller than the start")
-        sys.exit()
+    for ip_int in range(int(start_ip), int(end_ip) +1):
+        ip_list.append(ipaddress.IPv4Address(ip_int))
+    
 
-    for k in range(int(start_num[-1]), int(end_num[-1])+1):
-        ip = str(start3[0]) + "." + str(start3[1]) + "." + str(start3[2]) + "." + str(k)
-        ping(ip)
-
-
+    for ip in range(len(ip_list)):
+        thread = threading.Thread(target=ping , args=(ip_list[ip],),)
+        thread.start()
+        time.sleep(0.5)
+    
 
 
 def ping(ip):
     print(os.popen(f"ping {ip}").read())
-    print("")
 
