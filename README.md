@@ -9,8 +9,8 @@ To indicate most, if not all, of the alive ip addresses within your given range 
 * Given a range of ip addresses, it will ping all where the last octet is the only octet changed in order to     see all alive hosts.
 * Shows the ping results in terminal.
   # V2 Features - Release date TBD
-  * Supports any octet change.
-  * Uses threading for faster results. (Beta Testing)
+  * Supports any octet change. (PHASE: Pre-Alpha)
+  * Uses threading for faster results. (PHASE: Alpha testing)
   # Potential Later Versions
   * Output to a file that is specified.
   * GUI
