@@ -1,9 +1,14 @@
 import sys
 from cli_args_system import Args
-import h
-import checkip
-import running
+import Backend_Code.h as h
+import Backend_Code.checkip as checkip
+import Backend_Code.running as running
+import pyfiglet
 
+# art
+T = "Ping Range"
+ASCII_art_1 = pyfiglet.figlet_format(T)
+print(ASCII_art_1)
 
 def main():
     if len(sys.argv) < 2:
@@ -30,6 +35,7 @@ def main():
     if checkip.check(Start_Ip) and checkip.check(End_Ip):
         running.run(Start_Ip, End_Ip)
     
+    print("Finished")
     print("Results are in ping_output.txt")
     print("")
     sys.exit()
@@ -37,11 +43,9 @@ def main():
 
 
 if __name__ == "__main__":
+
     try:
         main()
     except KeyboardInterrupt:
         print("Keyboard Interupt")
         sys.exit()
-
-
-
