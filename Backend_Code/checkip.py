@@ -9,5 +9,5 @@ def check(ip):
         return True
     except ValueError:
         print(f"ERROR: {ip} is not a valid IP address!")
-        sys.exit()
+        return False
         

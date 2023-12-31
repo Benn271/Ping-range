@@ -4,7 +4,9 @@ import Backend_Code.h as h
 import Backend_Code.checkip as checkip
 import Backend_Code.running as running
 import pyfiglet
+import os
 
+os.popen(f"clear").read()
 # art
 T = "Ping Range"
 ASCII_art_1 = pyfiglet.figlet_format(T)
@@ -34,6 +36,8 @@ def main():
 
     if checkip.check(Start_Ip) and checkip.check(End_Ip):
         running.run(Start_Ip, End_Ip)
+    else:
+        sys.exit()
     
     print("Finished")
     print("Results are in ping_output.txt")
