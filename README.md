@@ -34,7 +34,7 @@ To indicate most, if not all, of the alive ip addresses within your given range 
   curl https://bootst/rap.pypa.io/get-pip.py -o get-pip.py
   python get-pip.py
   ```
-  2. Download the zip of the Ping-range code file from github
+  2. Download the zip from the Releases
   3. Run the following commands in Powershell
   ```
   pip3 install -r requirements.txt
